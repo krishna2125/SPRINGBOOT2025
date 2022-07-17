@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
 /**
  * Domain Class
  * @author SIVA
@@ -17,8 +20,10 @@ public class UserInfo {
 	@GeneratedValue
 	private Integer id;
 	@Column
+	@Size(min = 2, max = 15, message = "{name.size}")
 	private String name;
 	@Column
+	@Range(max = 2, message = "{age.size}")
 	private Integer age;
 
 	public UserInfo() {
