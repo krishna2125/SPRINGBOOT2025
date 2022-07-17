@@ -5,7 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+ * Domain Class
+ * @author SIVA
+ *
+ */
 @Entity
 @Table(name = "user_info")
 public class UserInfo {
